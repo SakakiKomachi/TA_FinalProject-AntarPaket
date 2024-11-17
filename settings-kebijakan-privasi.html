@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<title>Antar Paket</title>
+
+	<style>
+		:root {
+			--third: #E3ECF3;
+			--first: #289ED8;
+			--second: #41C9FF;
+			--fourth: #BCBBBB;
+		}
+
+		body {
+			min-width: 1200px;
+		}
+
+		.bg-first {
+			background-color: var(--first) !important;
+		}
+
+		.bg-second {
+			background-color: var(--second) !important;
+		}
+
+		.bg-third {
+			background-color: var(--third) !important;
+		}
+
+		.bg-fourth {
+			background-color: var(--fourth) !important;
+		}
+
+		.text-first {
+			color: var(--first) !important;
+		}
+
+		.text-second {
+			color: var(--second) !important;
+		}
+
+		.text-third {
+			color: var(--third) !important;
+		}
+
+		.text-fourth {
+			color: var(--fourth) !important;
+		}
+
+		.border-first {
+			border-color: var(--first) !important;
+		}
+
+		.border-third {
+			border-color: var(--third) !important;
+		}
+
+		.border-second {
+			border-color: var(--second) !important;
+		}
+
+		.border-fourth {
+			border-color: var(--fourth) !important;
+		}
+
+		.font-bold {
+			font-weight: bold;
+		}
+
+		.font-semibold {
+			font-weight: 600;
+		}
+
+		.font-normal {
+			font-weight: 400 !important;
+		}
+
+		.img-auto {
+			width: 100%;
+			object-fit: contain;
+		}
+
+		.absolute {
+			position: absolute;
+		}
+
+		.relative {
+			position: relative;
+		}
+
+		.gradient {
+			background: rgb(40, 158, 216);
+			background: linear-gradient(360deg, rgba(40, 158, 216, 1) 0%, rgba(0, 212, 255, 0) 100%);
+		}
+
+		.w-fit {
+			width: fit-content;
+			width: --moz-fit-content;
+		}
+
+		.shadow-first {
+			box-shadow: 0px 0px 14px 4px rgba(65, 201, 255, 0.75);
+			-webkit-box-shadow: 0px 0px 14px 4px rgba(65, 201, 255, 0.75);
+			-moz-box-shadow: 0px 0px 14px 4px rgba(65, 201, 255, 0.75);
+		}
+
+		.shadow-second {
+			box-shadow: 0px 0px 10px 0px rgba(65, 201, 255, 0.75);
+			-webkit-box-shadow: 0px 0px 10px 0px rgba(65, 201, 255, 0.75);
+			-moz-box-shadow: 0px 0px 10px 0px rgba(65, 201, 255, 0.75);
+		}
+
+		img.profile-lg {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 50%;
+		}
+
+		.z-99 {
+			z-index: 99;
+		}
+
+		#side {
+			width: 250px;
+			min-height: 100vh;
+			position: relative;
+			z-index: 999;
+		}
+
+		#side img.logo {
+			max-width: 150px;
+			width: 100%;
+		}
+
+		#side .link {
+			border-radius: 20px 0 0 20px;
+		}
+
+		#side .link img {
+			width: 30px;
+		}
+
+		#main {
+			min-width: calc(1200px - 250px);
+			width: calc(100vw - 250px);
+		}
+
+		#main #nav .left input {
+			outline: none !important;
+			border: 0 !important;
+			box-shadow: none !important;
+		}
+
+		#main #nav .left>button {
+			margin-top: -5px;
+		}
+
+		#main #nav .left>button .red {
+			background-color: red;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			top: 4px;
+			right: 8px;
+		}
+
+		#main #nav .right img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		#main #header .date label {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+		}
+
+		#main #content .card-sm img {
+			height: 30px;
+		}
+
+		.min-h-screen {
+			min-height: 100vh;
+		}
+
+		.link-settings.active {
+			background-color: #d9d9d957;
+		}
+
+		.btn-bordered {
+            border: 2px solid #000; 
+        }
+	</style>
+</head>
+
+<body>
+	<div class="d-flex">
+		<div class="bg-first px-3 py-4 d-flex flex-column gap-4" id="side">
+			<div class="container-fluid p-0 m-0 d-flex justify-content-center">
+				<img src="./assets/img/logo-white.png" alt="" class="logo">
+			</div>
+			<hr class="border-white border-2">
+			<div class="container-fluid m-0 px-3 py-2 link">
+				<a href="./dashboard.html"
+					class="lead text-decoration-none m-0 font-bold text-white d-flex gap-3 align-items-center"><img
+						src="./assets/img/dashboard-white.png" alt=""> <small>Dashboard</small></a>
+			</div>
+			<div class="container-fluid m-0 px-3 py-2 link dropdown">
+				<a data-bs-toggle="collapse" href="#collapseExample" role="button"
+					class="lead text-decoration-none m-0 font-bold text-white d-flex gap-3 align-items-center"><img
+						src="./assets/img/user-white.png" alt=""> <small>Customer</small></a>
+				<div class="collapse" id="collapseExample">
+					<hr class="mt-3">
+					<div class="d-flex flex-column gap-3 align-items-center py-3">
+						<a href="pengiriman2.html" class="text-decoration-none text-fourth">Pengiriman</a>
+						<a href="id-customer.html" class="text-decoration-none text-fourth">ID Customer</a>
+						
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid m-0 px-3 py-2 link bg-white">
+				<a href="settings-profile.html"
+					class="lead text-decoration-none m-0 font-bold text-first d-flex gap-3 align-items-center"><img
+						src="./assets/img/settings-blue.png" alt=""> <small>Pengaturan</small></a>
+			</div>
+			<div class="container-fluid m-0 px-3 py-2 link">
+				<a href="login.html"
+					class="lead text-decoration-none m-0 font-bold text-white d-flex gap-3 align-items-center"><img
+						src="./assets/img/logout.png" alt=""> <small>Keluar</small></a>
+			</div>
+		</div>
+		<div class="d-flex flex-column" id="main">
+			<div class="container-fluid bg-first py-3 px-4 d-flex justify-content-between align-items-center shadow-lg" id="nav">
+				<div class="left d-flex gap-3 align-items-center">
+					<div class="bg-white py-2 px-3 d-flex align-items-center rounded gap-3">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+							class="bi bi-search text-fourth" viewBox="0 0 16 16">
+							<path
+								d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+						</svg>
+						<input type="text" placeholder="Cari di sini...">
+					</div>
+					<button class="bg-transparent border-0 outline-0 relative" data-bs-toggle="modal" data-bs-target="#notifikasi">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+							class="text-white bi bi-bell" viewBox="0 0 16 16">
+							<path
+								d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+						</svg>
+						<div class="red absolute"></div>
+					</button>
+				</div>
+				<div class="right d-flex align-items-center gap-3">
+					<h6 class="text-white m-0 font-bold">Hansen</h6>
+					<img class="border border-2 border-white"
+						src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="">
+				</div>
+			</div>
+			<div class="container-fluid m-0 p-0 d-flex justify-content-between align-items-center shadow-lg">
+				<div class="row container-fluid m-0 p-0 min-h-screen border border-bottom-0">
+					<div class="col-3 bg-first p-0">
+						<div class="p-4 d-flex flex-column gap-3">
+							<h4 class="text-white m-0 px-4">Pengaturan</h4>
+							<a href="./settings-profile.html" class="text-decoration-none px-4 py-3 rounded-3 link-settings text-white mt-3">Edit profile</a>
+							<a href="./settings-password.html" class="text-decoration-none px-4 py-3 rounded-3 link-settings text-white">Password</a>
+							<a href="./settings-snk.html" class="text-decoration-none px-4 py-3 rounded-3 link-settings text-white ">Syarat dan ketentuan</a>
+							<a href="./settings-kebijakan-privasi.html" class="text-decoration-none px-4 py-3 rounded-3 link-settings text-white active">Kebijakan privasi</a>
+							<a href="./settings-customer-service.html" class="text-decoration-none px-4 py-3 rounded-3 link-settings text-white">Customer service</a>
+						</div>
+					</div>
+					<div class="col-9 p-0">
+						<div class="p-4 mt-4">
+							<h3 class="mb-4">Kebijakan Privasi</h3>
+							<p class="text-justify">Kebijakan Privasi ini menjelaskan bagaimana PT. Seven Inc., masing-masing anak perusahaan, afiliasinya, perusahaan-perusahaan yang terasosiasi dengannya, dan entitas-entitas yang dikendalikan bersama (secara kolektif disebut “Antar Paket”) mengumpulkan, menyimpan, menggunakan, mengolah, menganalisa, menguasai, mentransfer, mengungkapkan, menampilkan, membuka dan melindungi setiap data atau informasi pribadi anda (selanjutnya disebut “Pengguna”, atau “Anda”) yang diberikan kepada Anteraja terhadap penggunaan situs (www.anteraja.id) dan aplikasi milik Anteraja (selanjutnya disebut “Situs”) dalam penggunaan layanan yang kami sediakan (selanjutnya disebut “Layanan”).</p>
+							<p class="text-justify">“Data Pribadi” adalah segala informasi yang dapat digunakan untuk mengidentifikasi Anda atau dari mana Anda dapat diidentifikasi. Ini termasuk tetapi tidak terbatas pada nama, kebangsaan, nomor telepon, rincian bank dan kartu kredit, keminatan pribadi (personal interest), alamat email, foto diri, nomor identifikasi yang dikeluarkan pemerintah, data biometrik, ras, tanggal lahir, status perkawinan, agama, maupun infomasi perangkat dan informasi lainnya yang disediakan oleh Anda kepada Kami.</p>
+							<p class="text-justify">Antar paket dengan serius bertanggung jawab berdasarkan peraturan yang berlaku di Indonesia tentang data privasi (selanjutnya disebut "Peraturan") dan berkomitmen untuk menghormati hak dan masalah privasi semua Pengguna. Kami mengakui pentingnya Data Pribadi yang telah Anda percayakan kepada kami dan merupakan tanggung jawab kami.</p>
+							<h6 class="fw-bold my-4">A. PEROLEHAN DAN PENGUMPULAN DATA PRIBADI</h6>
+							<p class="text-justify ms-3">Antar paket mengumpulkan Data Pribadi dengan tujuan untuk memproses transaksi Anda, mengelola dan memperlancar proses penggunaan Situs, serta tujuan-tujuan lainnya selama diizinkan oleh Peraturan. Kami juga dapat menggabungkan Data Pribadi yang dikumpulkan dengan Data Pribadi lainnya yang kami miliki. Adapun Data Pribadi yang dikumpulkan dengan cara yang tercantum di bawah ini:</p>
+							<p class="text-justify ms-3 font-semibold">1. Data Pribadi yang diserahkan secara mandiri oleh Pengguna, termasuk namun tidak terbatas pada data yang diserahkan pada saat Pengguna:</p>
+							<p class="text-justify ms-4">a. Membuat atau memperbarui akun di Anteraja, termasuk diantaranya nama pengguna (username), alamat email, nomor telepon, password, alamat, foto, dan lain-lain;</p>
+							<p class="text-justify ms-4">b. Menghubungi Anteraja, termasuk melalui layanan pelanggan;</p>
+							<p class="text-justify ms-4">c. Mengisi survei yang dikirimkan oleh Anteraja atau atas nama Anteraja;</p>
+							<p class="text-justify ms-4">d. Melakukan interaksi dengan Pengguna lainnya melalui fitur pesan, diskusi produk, ulasan, rating, dan sebagainya;</p>
+							<p class="text-justify ms-4">e. Mempergunakan Layanan pada Situs, termasuk data transaksi yang detil, diantaranya jenis, jumlah dan/atau keterangan dari barang milik Pengguna, informasi terkait pengirim dan penerima, kanal pembayaran yang digunakan, jumlah transaksi, tanggal dan waktu transaksi, serta detil transaksi lainnya;</p>
+							<p class="text-justify ms-4">f. Mengisi data-data pembayaran pada saat Pengguna melakukan aktivitas transaksi pembayaran melalui Situs, termasuk namun tidak terbatas pada data rekening bank, kartu kredit, virtual account, instant payment, internet banking, gerai ritel, nomor telepon; dan/atau</p>
+							<p class="text-justify ms-4">g. Menggunakan fitur yang membutuhkan izin akses terhadap perangkat Pengguna.</p>
+							<p class="text-justify ms-3 font-semibold">2. Data Pribadi yang diserahkan secara mandiri oleh Pengguna, termasuk namun tidak terbatas pada data yang diserahkan pada saat Pengguna:</p>
+							<p class="text-justify ms-4">a. Data lokasi riil atau perkiraannya seperti alamat IP, lokasi Wi-Fi, geo-location, dan sebagainya;</p>
+							<p class="text-justify ms-4">b. Data berupa waktu dari setiap aktivitas Pengguna, termasuk aktivitas pendaftaran, login, transaksi, dan lain sebagainya;</p>
+							<p class="text-justify ms-4">c. Data penggunaan atau preferensi Pengguna, diantaranya interaksi Pengguna dalam menggunakan Situs, pilihan yang disimpan, serta pengaturan yang dipilih. Data tersebut diperoleh menggunakan cookies, pixel tags, dan teknologi serupa yang menciptakan dan mempertahankan pengenal unik;</p>
+							<p class="text-justify ms-4">d. Data perangkat, diantaranya jenis perangkat yang digunakan untuk mengakses Situs, termasuk model perangkat keras, sistem operasi dan versinya, perangkat lunak, nama file dan versinya, pilihan bahasa, pengenal perangkat unik, pengenal iklan, nomor seri, informasi gerakan perangkat, dan/atau informasi jaringan seluler;</p>
+							<p class="text-justify ms-4">e. Data catatan (log), diantaranya catatan pada server yang menerima data seperti alamat IP perangkat, tanggal dan waktu akses, fitur aplikasi atau laman yang dilihat, proses kerja aplikasi dan aktivitas sistem lainnya, jenis peramban, dan/atau situs atau layanan pihak ketiga yang Anda gunakan sebelum berinteraksi dengan Situs.</p>
+							<p class="text-justify ms-3 font-semibold">3. Data yang diperoleh dari sumber lain, termasuk:</p>
+							<p class="text-justify ms-4">a. Mitra usaha Anteraja yang turut membantu Anteraja dalam mengembangkan dan menyajikan Layanan dalam Situs kepada Pengguna, antara lain mitra penyedia layanan pembayaran, infrastruktur situs, dan mitra-mitra lainnya.</p>
+							<p class="text-justify ms-4">b. Mitra usaha Anteraja tempat Pengguna membuat atau mengakses akun Anteraja, seperti layanan media sosial, atau situs/aplikasi yang menggunakan API Anteraja atau yang digunakan Anteraja;</p>
+							<p class="text-justify ms-4">c. Penyedia layanan finansial;</p>
+							<p class="text-justify ms-4">d. Penyedia layanan pemasaran;</p>
+							<p class="text-justify ms-4">e. Sumber yang tersedia secara umum.</p>
+							<p class="text-justify ms-3 font-semibold">4. Ketentuan tambahan:</p>
+							<p class="text-justify ms-4">a. Data Pribadi anak di bawah umur. Sebagai orang tua atau wali yang sah, mohon jangan izinkan anak di bawah umur Anda menyerahkan Data Pribadi kepada Anteraja. Dalam hal Data Pribadi anak dibawah umur tersebut diungkapkan kepada Anteraja, Anda dengan ini menyetujui pemrosesan Data Pribadi anak dibawah umur tersebut dan menerima dan setuju untuk terikat oleh Kebijakan ini dan bertanggung jawab atas tindakannya.</p>
+							<p class="text-justify ms-4">b. Saat Anda memberikan data pribadi individu lain kepada kami Dalam beberapa situasi, Anda dapat memberikan Data Pribadi orang lain (seperti pasangan Anda, anggota keluarga atau teman) kepada kami. Misalnya, Anda dapat menambahkannya sebagai kontak darurat. Jika Anda memberikan kepada kami Data Pribadi mereka, Anda menyatakan dan menjamin bahwa Anda telah dan Anda telah memperoleh persetujuan mereka untuk Data Pribadi mereka untuk dikumpulkan, digunakan, dan diungkapkan sebagaimana diatur dalam Kebijakan ini.</p>
+							<h6 class="fw-bold my-4">B. PENGGUNAAN DATA PRIBADI</h6>
+							<p class="text-justify ms-3">Anteraja dapat menggunakan keseluruhan atau sebagian Data Pribadi yang diperoleh dan dikumpulkan dari Pengguna sebagaimana disebutkan dalam bagian sebelumnya untuk hal-hal sebagai berikut:</p>
+							<p class="text-justify ms-3 font-semibold">1. Memproses segala bentuk permintaan, aktivitas maupun transaksi yang dilakukan oleh Pengguna melalui Situs termasuk memproses pesanan Pengguna dan mengaktifkan atau menonaktifkan Layanan, memungkinkan kami untuk memproses tagihan dan pembayaran serta menginformasikan Pengguna mengenai peningkatan dan pembaruan Layanan.</p>
+							<p class="text-justify ms-3 font-semibold">2. Penyediaan fitur-fitur untuk memberikan, mewujudkan, memelihara dan memperbaiki Layanan kami, termasuk:</p>
+							<p class="text-justify ms-4">a. Menawarkan, memperoleh, menyediakan, atau memfasilitasi layanan asuransi, pembiayaan, pinjaman, maupun produk-produk lainnya melalui Situs;</p>
+							<p class="text-justify ms-4">b. Mengaktifkan fitur yang mempersonalisasi akun Anda, seperti daftar tempat atau tujuan pengiriman favorit Anda;</p>
+							<p class="text-justify ms-4">c. Melakukan kegiatan internal yang diperlukan untuk menyediakan Layanan pada Situs, seperti pemecahan masalah software, bug, permasalahan operasional, melakukan analisis data, pengujian, dan penelitian, dan untuk memantau dan menganalisis kecenderungan penggunaan dan aktivitas.</p>
+							<p class="text-justify ms-3 font-semibold">3. Membantu Pengguna pada saat berkomunikasi dengan layanan pelanggan dari Anteraja, diantaranya untuk:</p>
+							<p class="text-justify ms-4">a. Memeriksa dan mengatasi permasalahan Pengguna;</p>
+							<p class="text-justify ms-4">b. Mengarahkan pertanyaan Pengguna kepada petugas layanan pelanggan yang tepat untuk mengatasi permasalahan; dan</p>
+							<p class="text-justify ms-4">c. Mengawasi dan memperbaiki tanggapan layanan pelanggan dari Anteraja.</p>
+							<p class="text-justify ms-3 font-semibold">4. Menghubungi Pengguna melalui email, surat, telepon, fax, dan lain-lain, termasuk namun tidak terbatas, untuk membantu dan/atau menyelesaikan proses transaksi maupun proses penyelesaian kendala.</p>
+							<p class="text-justify ms-3 font-semibold">5. Melakukan penelitian pasar dan peninjauan kepuasan pelanggan untuk meningkatkan layanan pelanggan kami, pengembangan dan pengujian produk guna meningkatkan keamanan dan keamanan layanan-layanan pada Situs, serta mengembangkan fitur dan produk baru.</p>
+							<p class="text-justify ms-3 font-semibold">6. Menginformasikan kepada Pengguna terkait produk, layanan, promosi bermanfaat dan program loyalitas yang mungkin Anda dapat gunakan/ nikmati, studi, survei, berita, perkembangan terbaru, acara dan lain-lain, baik melalui Situs maupun melalui media lainnya. Anteraja juga dapat menggunakan informasi tersebut untuk mempromosikan dan memproses kontes dan undian, memberikan hadiah, serta menyajikan iklan dan konten yang relevan tentang Layanan Anteraja dan mitra usahanya.</p>
+							<p class="text-justify ms-3 font-semibold">7. Melakukan monitoring ataupun investigasi terhadap transaksi-transaksi mencurigakan atau transaksi yang terindikasi mengandung unsur kecurangan atau pelanggaran terhadap Syarat dan Ketentuan atau ketentuan hukum yang berlaku, serta melakukan tindakan-tindakan yang diperlukan sebagai tindak lanjut dari hasil monitoring atau investigasi transaksi tersebut.</p>
+							<p class="text-justify ms-3 font-semibold">8. Melindungi keamanan atau integritas Layanan dan setiap fasilitas atau peralatan yang digunakan untuk membuat Layanan tersedia;</p>
+							<p class="text-justify ms-3 font-semibold">9. Dalam keadaan tertentu, Anteraja mungkin perlu untuk menggunakan ataupun mengungkapkan Data Pribadi milik Pengguna untuk tujuan penegakan hukum atau untuk pemenuhan persyaratan hukum dan peraturan yang berlaku, termasuk dalam hal terjadinya sengketa atau proses hukum antara Pengguna dan Anteraja.</p>
+							<h6 class="fw-bold my-4">C. PENGUNGKAPAN DATA PRIBADI PENGGUNA</h6>
+							<p class="text-justify ms-3">Antar Paket tidak akan menggunakan Data Pribadi anda selain untuk tujuan yang telah kami beritahukan kepada anda, atau yang mana diijinkan oleh hukum dan peraturan setempat. Kami tidak akan menawarkan, menerbitkan, memberikan, menjual, mengalihkan, mendistribusikan atau meminjamkan Data Pribadi anda dengan pihak lainnya di luar kami untuk tujuan komersial, tanpa meminta persetujuan dari anda, kecuali terhadap hal-hal sebagai berikut:</p>
+							<p class="text-justify ms-3">1. Dibutuhkan adanya pengungkapan Data Pribadi Pengguna kepada mitra atau pihak ketiga lain yang membantu Anteraja dalam menyajikan Layanan pada Situs dan memproses segala bentuk aktivitas Pengguna dalam Situs, termasuk memproses transaksi, verifikasi pembayaran, pengiriman produk, dan lain-lain.</p>
+							<p class="text-justify ms-3">2. Dibutuhkan adanya komunikasi antara mitra usaha Anteraja (seperti kurir, pembayaran, dan lain-lain) dengan Pengguna dalam hal penyediaan Layanan.</p>
+							<p class="text-justify ms-3">3. Anteraja dapat menyediakan informasi yang relevan kepada vendor, konsultan, mitra pemasaran, firma riset, atau penyedia layanan sejenis.</p>
+							<p class="text-justify ms-3">4. Pengguna menghubungi Anteraja melalui media publik seperti blog, media sosial, dan fitur tertentu pada Situs, komunikasi antara Pengguna dan Anteraja mungkin dapat dilihat secara publik.</p>
+							<p class="text-justify ms-3">5. Anteraja mengungkapkan data Pengguna dalam upaya mematuhi kewajiban hukum dan/atau adanya permintaan yang sah dari aparat penegak hukum.</p>
+							<h6 class="fw-bold my-4">D. COOKIES</h6>
+							<p class="text-justify ms-3">Anteraja, dan pihak ketiga yang bekerjasama dengan kami, dapat menggunakan cookies, web beacons, tags, scripts, local shared objects, yaitu HTML5 dan Flash (yang terkadang dikenal sebagai “flash cookies”), pengidentifikasi pemasaran (termasuk pengidentifikasi perangkat bergerak, yaitu IDFA milik Apple atau identitas pemasaran milik Google) dan teknologi sejenis lainnya (“Cookies”) sehubungan dengan penggunaan Situs. Cookies dapat memiliki pengidentifikasi unik, dan tersimpan dalam, diantaranya, computer atau perangkat lainnya yang anda gunakan, surat elektronik yang kami kirimkan kepada anda, dan pada Situs. Cookies dapat mengirimkan Data Pribadi anda dan penggunaan Layanan oleh anda, termasuk tipe aplikasi penjelajah internet (browser), preferensi pencarian anda, alamat IP, data terkait pemasaran yang telah ditampilkan dan dipilih oleh anda, dan tanggal serta waktu penggunaan anda. Cookies tersebut tidak diperuntukkan untuk digunakan pada saat melakukan akses data lain yang Pengguna miliki di perangkat komputer Pengguna, selain dari yang telah Pengguna setujui untuk disampaikan.</p>
+							<p class="text-justify ms-3">Anteraja memungkinkan pihak ketiga untuk menggunakan Cookies pada Situs untuk mengumpulkan tipe Data Pribadi yang serupa untuk tujuan yang sama sebagaimana Anteraja melakukannya untuk kepentingannya sendiri. Pihak ketiga tersebut dapat menghubungkan Data Pribadi yang dihimpunnya dengan Data Pribadi anda yang mereka himpun dan miliki mengenai anda dari sumber lainnya. Kami tidak senantiasa memiliki akses kepada atau mengontrol Cookies yang mereka gunakan.</p>
+							<p class="text-justify ms-3">Lebih lanjut, kami dapat memberikan Data Pribadi yang bersifat tidak dapat diidentifikasi secara individu kepada pihak ketiga, yaitu data lokasi, pengidentifikasi pemasaran, atau kompilasi kriptografis dari pengidentifikasi akun biasa (yaitu alamat surat elektronik), untuk memfasilitasi tampilan pemasaran yang memiliki target khusus</p>
+							<p class="text-justify ms-3">Walaupun secara otomatis perangkat komputer Pengguna akan menerima Cookies, jika Anda tidak berkenan sehubungan dengan pengumpulan Data Pribadi anda melalui Cookies dalam Situs, anda dapat mematikan Cookies dengan mengatur ulang pengaturan penjelajah (browser) internet Anda untuk mematikan, memblokir, atau me-nonaktif-kan Cookies, dengan menghapus riwayat penjelajahan dan cache dari penjelajah internet anda. Anda juga dapat membatasi pemberian sebagian Data Pribadi ini melalui pengaturan perangkat anda.</p>
+							<h6 class="fw-bold my-4">E. PILIHAN PENGGUNA DAN TRANSPARANSI</h6>
+							<p class="text-justify ms-3">Perangkat yang anda gunakan pada umumnya (iOS, Android, dan sebagainya) memiliki pengaturan sehingga Situs tidak dapat mengakses data tertentu tanpa persetujuan dari Pengguna. Dengan menggunakan Situs dan memberikan akses terhadap aplikasi, Pengguna dianggap memberikan persetujuannya terhadap Kebijakan Privasi.</p>
+							<p class="text-justify ms-3">Pengguna dapat mengakses dan mengubah Data Pribadi berupa alamat email, nomor telepon, tanggal lahir, jenis kelamin, daftar alamat, metode pembayaran, dan rekening bank melalui fitur pengaturan pada Situs.</p>
+							<p class="text-justify ms-3">Pengguna dapat menolak dari informasi atau notifikasi berupa buletin, ulasan, diskusi Layanan, pesan pribadi yang dikirimkan oleh Anteraja melalui fitur pengaturan pada Situs. Anterja tetap dapat mengirimkan pesan atau email berupa keterangan transaksi atau informasi terkait akun Pengguna.</p>
+							<p class="text-justify ms-3">Sejauh diizinkan oleh Peraturan, Pengguna dapat menghubungi Anteraja untuk melakukan penarikan persetujuan terhadap perolehan, pengumpulan, penyimpanan, pengelolaan dan penggunaan Data Pribadi Pengguna. Apabila terjadi demikian maka Pengguna memahami konsekuensi bahwa Pengguna tidak dapat menggunakan Situs maupun Layanan Anteraja lainnya.</p>
+							<h6 class="fw-bold my-4">F. PEMELIHARAAN DATA PRIBADI</h6>
+							<p class="text-justify ms-3">Kami akan memelihara Data Pribadi anda selama anda belum menghapus akun anda di dalam Situs. Ketika Data Pribadi anda tidak diperlukan untuk penyediaan Layanan atau tujuan penggunaan Data Pribadi, atau kami tidak lagi memiliki tujuan baik hukum maupun bisnis untuk memelihara Data Pribadi anda, kami mengambil tindakan untuk mencegah akses atau penggunaan Data Pribadi tersebut untuk tujuan apapun selain dari pemenuhan kewajiban kami terhadap Kebijakan Privasi ini, atau tujuan keamanan, pencegahan dan deteksi penipuan.</p>
+							<h6 class="fw-bold my-4">G. PENYANGKALAN MENGENAI KEAMANAN DAN SITUS PIHAK KETIGA</h6>
+							<p class="text-justify ms-3">Anteraja tidak menjamin keamanan Data Pribadi dan/atau informasi lainnya yang anda berikan pada situs pihak ketiga. Terkait akses situs lainnya tersebut, anda bertanggungjawab atas risiko anda sendiri.</p>
+							<h6 class="fw-bold my-4">H. PENGALIHAN DATA PRIBADI KE LUAR NEGERI</h6>
+							<p class="text-justify ms-3">Data Pribadi anda mungkin dialihkan, disimpan atau diolah di luar negara anda oleh pihak yang bekerja untuk kami di negara lain, atau oleh penyedia layanan pihak ketiga, vendor, pemasok, mitra, kontraktor, atau afiliasi kami. Dalam hal tersebut, kami akan memastikan bahwa Data Pribadi tersebut tetap menjadi subjek dari tingkat perlindungan yang sebanding dengan apa yang disyaratkan dalam hukum negara anda (dan, dalam hal apapun, sejalan dengan komitmen kami dalam Kebijakan Privasi ini).</p>
+							<h6 class="fw-bold my-4">I. PENYIMPANAN INFORMASI</h6>
+							<p class="text-justify ms-3">Data Pribadi anda yang kami terima dapat disimpan, ditransfer, atau diolah oleh penyedia layanan pihak ketiga. Kami akan menggunakan semua upaya yang wajar untuk memastikan bahwa semua penyedia layanan pihak ketiga tersebut diwajibkan untuk memberikan tingkat perlindungan yang sebanding dengan komitmen kami berdasarkan Kebijakan Privasi ini.</p>
+							<h6 class="fw-bold my-4">J. PEMBARUAN KEBIJAKAN PRIVASI</h6>
+							<p class="text-justify ms-3">Anteraja dapat sewaktu-waktu melakukan perubahan atau pembaruan terhadap Kebijakan Privasi ini. Kami menyarankan agar Pengguna membaca dan memahami ketentuan dalam Kebijakan Privasi ini dari waktu ke waktu untuk mengetahui perubahan apapun. Dengan tetap mengakses dan menggunakan Situs maupun Layanan Anteraja lainnya, maka Pengguna dianggap menyetujui perubahan-perubahan dalam Kebijakan Privasi ini.</p>
+							<h6 class="fw-bold my-4">K. LAYANAN PENGGUNA</h6>
+							<p class="text-justify ms-3">Jika Anda memiliki pertanyaan mengenai Data Pribadi anda, mohon hubungi:</p>
+							<p class="text-justify ms-3">PT Seven Inc (ANTAR PAKET)</p>
+							<p class="text-justify ms-3">Jalan Raya Janti, Gang Arjuna Nomor 59, Karangjambe, Banguntapan, Bantul Regency, Special Region of Yogyakarta 55198</p>
+							<p class="text-justify ms-3">Email : cs@antarpaket.id</p>
+							<p class="text-justify ms-3">Telepon : 089633040200</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	  <!--modal notifikasi-->
+	  <div class="modal fade" id="notifikasi" tabindex="-1" aria-labelledby="notifikasi" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5 modal-text" id="notifikasi">Notifikasi</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="d-flex flex-column mb-2">
+					<div class="fw-bold">Amarullah Cafu Prabowo</div>
+				</div>
+				<div class="d-flex justify-content-between align-items-center mb-2">
+					<p class="mb-0 small">30 barang</p>
+					<p class="mb-0 small text-end">Jl. Anggrek</p>
+				</div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<button type="button" class="btn border-1 btn-bordered btn-sm">Terima</button>
+						<button type="button" class="btn border-1 btn-bordered btn-sm">Tolak</button>
+					</div>
+					<div class="border p-2 rounded-3 bg-first text-light">
+						<p class="mb-0 small">1 menit yang lalu</p>
+					</div>
+				</div>
+			<hr class="border-primary">
+			<div class="d-flex flex-column mb-2">
+				<div class="fw-bold">Febri</div>
+			</div>
+			<div class="d-flex justify-content-between align-items-center mb-2">
+				<p class="mb-0 small">60 barang</p>
+				<p class="mb-0 small text-end">Jl. Mawar</p>
+			</div>
+			<div class="d-flex justify-content-between align-items-center">
+				<div>
+					<button type="button" class="btn btn-danger btn-sm">Ditolak</button>
+					<button type="button" class="btn btn-sm btn-bordered">Lihat</button>
+				</div>
+				<div class="border p-2 bg-first rounded-3">
+					<p class="mb-0 small text-light">1 menit yang lalu</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelector('.dropdown > a').addEventListener('click', e => {
+				const isCollapse = !(Array.from(document.querySelector('.dropdown > a').classList).pop() === 'collapsed')
+				if (isCollapse) {
+					document.querySelector('.dropdown').classList.add('bg-white')
+					document.querySelector('.dropdown > a').classList.add('text-first')
+					document.querySelector('.dropdown > a > img').src = "./assets/img/user-blue.png"
+				} else {
+					document.querySelector('.dropdown').classList.remove('bg-white')
+					document.querySelector('.dropdown > a').classList.remove('text-first')
+					document.querySelector('.dropdown > a > img').src = "./assets/img/user-white.png"
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
